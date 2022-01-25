@@ -1,6 +1,5 @@
 flask
 youtube_dl
-urllib
 re
 json
 requests
