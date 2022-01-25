@@ -1,8 +1,7 @@
 flask
 youtube_dl
-re
-json
 requests
 sys
 codecs
 unicodedata
+gunicorn
