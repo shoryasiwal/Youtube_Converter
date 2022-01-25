@@ -3,4 +3,4 @@ youtube_dl
 requests
 gunicorn
 ffmpeg
-ffprobel
+ffprobe
