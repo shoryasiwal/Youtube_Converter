@@ -1,5 +1,4 @@
 flask
-os
 youtube_dl
 urllib
 re
