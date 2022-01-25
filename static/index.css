@@ -1,0 +1,713 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+.form {
+  align-items: center;
+  margin-left: 430px;
+}
+
+.btnconvert {
+  border: 1px solid white;
+  background: black;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+  border-radius: 40px;
+  text-align: center;
+  color: white;
+  width: 100px;
+}
+
+.phoneimg {
+  width: 50px;
+  height: 250px;
+  align-items: center;
+}
+
+.stepimg {
+  width: max-content;
+  height: 250px;
+  align-items: center;
+}
+
+.middle {
+  height: 200px;
+  align-items: center;
+}
+.shrink {
+  width: 400px;
+  border-radius: 200px;
+  margin-right: 10px;
+}
+.bold {
+  font-weight: bold;
+}
+.green1 {
+  color: green;
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat", sans-serif;
+}
+html,
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  background: #222;
+  background-size: cover;
+  background-repeat: repeat;
+  position: relative;
+}
+
+.container {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.step {
+  border: 3px solid white;
+  border-radius: 10px;
+  background-color: grey;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1000px;
+  height: 600px;
+  padding: 0;
+  text-align: center;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: black;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+}
+
+.box .imageBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.box:hover .imageBox img {
+  opacity: 0;
+}
+
+.box .content {
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  width: 80%;
+  height: 10%;
+  background: white;
+  transition: 0.5s;
+  overflow: hidden;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.box .content h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+.box:hover .content {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.box .content p {
+  margin: 10px 0 0;
+  padding: 0;
+  opacity: 0;
+  line-height: 1.2em;
+  transition: 0.5s;
+  text-align: justify;
+}
+
+.box:hover .content p {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+.box2 {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: black;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+  margin-right: 50px;
+  margin-top: 10px;
+}
+
+.box2 .imageBox2 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  transition: 0.5s;
+  margin-right: 50px;
+}
+
+.box2:hover .imageBox2 img {
+  opacity: 0;
+  margin-right: 350px;
+}
+
+.box2 .content2 {
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  width: 80%;
+  height: 10%;
+  background: white;
+  transition: 1s;
+  overflow: hidden;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.box2 .content2 h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+.box2:hover .content2 {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.box2 .content2 p {
+  margin: 10px 0 0;
+  padding: 0;
+  opacity: 0;
+  line-height: 1.2em;
+  transition: 0.5s;
+  text-align: justify;
+}
+
+.box2:hover .content2 p {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+.content2 {
+  padding: 0 20px;
+}
+
+.content2 img {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px 0;
+}
+
+.content2 p {
+  text-align: justify;
+}
+
+.box3 {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: black;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+  margin-right: 0px;
+  margin-top: 10px;
+}
+
+.box3 .imageBox3 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  transition: 0.5s;
+  margin-right: 0px;
+  margin-top: 10px;
+}
+
+.box3:hover .imageBox3 img {
+  opacity: 0;
+  margin-right: 0px;
+  margin-top: 20px;
+}
+
+.box3 .content3 {
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  width: 80%;
+  height: 10%;
+  background: white;
+  transition: 0.5s;
+  overflow: hidden;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.box3 .content3 h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+.box3:hover .content3 {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.box3 .content3 p {
+  margin: 10px 0 0;
+  padding: 0;
+  opacity: 0;
+  line-height: 1.2em;
+  transition: 0.5s;
+  text-align: justify;
+}
+
+.box3:hover .content3 p {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+.content3 {
+  padding: 0 20px;
+}
+
+.content3 img {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px 0;
+}
+
+.content3 p {
+  text-align: justify;
+}
+
+.box4 {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: black;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+}
+
+.box4 .imageBox4 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.box4:hover .imageBox4 img {
+  opacity: 0;
+}
+
+.box4 .content4 {
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  width: 80%;
+  height: 10%;
+  background: white;
+  transition: 0.5s;
+  overflow: hidden;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.box4 .content4 h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+.box4:hover .content4 {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.box4 .content4 p {
+  margin: 10px 0 0;
+  padding: 0;
+  opacity: 0;
+  line-height: 1.2em;
+  transition: 0.5s;
+  text-align: justify;
+}
+
+.box4:hover .content4 p {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+.box5 {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: black;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+  margin-right: 50px;
+  margin-top: 10px;
+}
+
+.box5 .imageBox5 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  transition: 0.5s;
+  margin-right: 50px;
+}
+
+.box5:hover .imageBox5 img {
+  opacity: 0;
+  margin-right: 350px;
+}
+
+.box5 .content5 {
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  width: 80%;
+  height: 10%;
+  background: white;
+  transition: 1s;
+  overflow: hidden;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.box5 .content5 h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+.box5:hover .content5 {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.box5 .content5 p {
+  margin: 10px 0 0;
+  padding: 0;
+  opacity: 0;
+  line-height: 1.2em;
+  transition: 0.5s;
+  text-align: justify;
+}
+
+.box5:hover .content5 p {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+.content5 {
+  padding: 0 20px;
+}
+
+.content5 img {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px 0;
+}
+
+.content5 p {
+  text-align: justify;
+}
+
+.box6 {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: black;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+  margin-right: 0px;
+  margin-top: 10px;
+}
+
+.box6 .imageBox6 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  transition: 0.5s;
+  margin-right: 0px;
+  margin-top: 10px;
+}
+
+.box6:hover .imageBox6 img {
+  opacity: 0;
+  margin-right: 0px;
+  margin-top: 20px;
+}
+
+.box6 .content6 {
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  width: 80%;
+  height: 10%;
+  background: white;
+  transition: 0.5s;
+  overflow: hidden;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.box6 .content6 h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+.box6:hover .content6 {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.box6 .content6 p {
+  margin: 10px 0 0;
+  padding: 0;
+  opacity: 0;
+  line-height: 1.2em;
+  transition: 0.5s;
+  text-align: justify;
+}
+
+.box6:hover .content6 p {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+.content6 {
+  padding: 0 20px;
+}
+
+.content6 img {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px 0;
+}
+
+.content6 p {
+  text-align: justify;
+}
+
+.logo2 {
+  background-image: url("images/Logo.png");
+  background-repeat: no-repeat;
+  position: relative;
+}
+.header {
+  height: 100px;
+  background: grey;
+  padding: 0 20px;
+  color: #fff;
+}
+
+.logo {
+  line-height: 100px;
+  float: left;
+  text-transform: uppercase;
+  width: 170px;
+  height: 100px;
+}
+
+.menu {
+  float: right;
+  line-height: 100px;
+}
+.white {
+  color: white;
+}
+.center {
+  border: 3px solid white;
+  border-radius: 10px;
+  background-color: grey;
+  margin: auto;
+
+  width: 50%;
+  padding: 30px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.menu a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.show-menu-btn,
+.hide-menu-btn {
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+.show-menu-btn {
+  float: right;
+}
+.show-menu-btn i {
+  line-height: 100px;
+}
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover {
+  color: #000000;
+}
+
+#chk {
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+.content {
+  padding: 0 20px;
+}
+
+.content img {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px 0;
+}
+
+.content p {
+  text-align: justify;
+}
+
+.middle {
+  text-align: center;
+}
+
+.btn {
+  border: 1px solid white;
+  background: black;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+  border-radius: 40px;
+}
+
+.heading {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-size: 40px;
+}
+.smallbox {
+  position: relative;
+  width: 350px;
+  height: 400px;
+  background: black;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+}
+
+.smallheading {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-size: 40px;
+}
+.btn1 {
+  color: white;
+}
+
+.btn1:hover {
+  color: #5167c7;
+}
+.Convert_box {
+  background-color: gray;
+  margin: auto;
+  width: 50%;
+  border: 3px solid white;
+  padding: 30px;
+  text-align: center;
+  margin-top: 60px;
+  border-radius: 40px;
+}
+
+@media screen and (max-width: 800px) {
+  .show-menu-btn,
+  .hide-menu-btn {
+    display: block;
+  }
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+  }
+  .menu a {
+    display: block;
+    padding: 20px;
+  }
+  .hide-menu-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #chk:checked ~ .menu {
+    right: 0;
+  }
+}
+
+/* <h1 class="green1">Free Youtube Converter</h1> */
+/* <img class="shrink" src="images/trial pic.jpeg" alt="Invalid-Format" /> */
+/* <h2 class="bold"> */
+/* Convert youtube videos to any of the given formats down below!
+  </h2>
+  <p>To begin insert a url link into the text box below:</p> */

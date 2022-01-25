@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="{{ url_for('static',filename='index.css')}}" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scaled=1" />
+    <title>Free Youtube Converter</title>
+    <script
+      src="https://kit.fontawesome.com/1fab7349ee.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="background">
+    <div class="header">
+      <img src="{{pic4}}" class="logo" />
+      <input type="checkbox" id="chk" />
+      <label for="chk" class="show-menu-btn">
+        <i class="fas fa-ellipsis-h"></i>
+      </label>
+
+      <ul class="menu">
+        <a href="index.html">Converter</a>
+        <a href="services.html">Terms And Services</a>
+        <a href="about.html">About Me</a>
+        <a href="contact.html">Contact Me</a>
+        <label for="chk" class="hide-menu-btn">
+          <i class="fas fa-times"></i>
+        </label>
+      </ul>
+    </div>
+    <div class="center">
+      <h1 class="heading">Youtube to Mp3/Mp4</h1>
+      <br />
+
+      <p class="white">
+        <strong
+          >Before using this website please read the terms and services.</strong
+
+          Look below to see the steps required in order to use this website!
+        >
+      </div>
+
+    <div class="content">
+      <div></div>
+      <div class="Convert_box">
+        <h1 class="heading">Enter A Link Below To Convert:</h1>
+          <input
+            id="urlholder"
+            name="url"
+            type="text"
+            size="70px"
+            placeholder="Enter Link Here:"
+            autofocus=required
+            style="margin-bottom: 10px;"
+          />
+          <br />
+          <button id="btnmp4" onclick="convertMp4()" style="padding:10px;background-color: black;border:1px solid transparent;color:white;border-radius: 20px;padding-right: 30px;padding-left: 30px;font-size: 26px;">Convert Mp4</button>
+          <button id="btnmp3" onclick="convertMp3()" style="padding:10px;background-color: black;border:1px solid transparent;color:white;border-radius: 20px;padding-right: 30px;padding-left: 30px;font-size: 26px;">Convert Mp3</button>
+      </div>
+      <div id="separator"></div>
+
+      <div class="step">
+        <h6 class="heading">How to convert youtube videos on laptop/desktop</h6>
+        <div class="container">
+
+          <div class="box">
+            <div class="imageBox">
+              <img src="{{pic1}}">
+            </div>
+            <div class="content">
+              <h3>The First Step</h3>
+              <p>The first step to converting the link on the website is to vist a website such as "youtube.com"</p>
+              <img src="{{pic5}}" class="stepimg">
+            </div> 
+          </div>
+          <div class="box2">
+            <div class="imageBox2">
+              <img src="{{pic2}}">
+            </div>
+            <div class="content2">
+              <h3>The Second Step</h3>
+              <p>The second step is searching a video and copying the link.</p>
+              <img src="{{pic6}}" class="stepimg">
+            </div> 
+          </div>
+          <div class="box3">
+            <div class="imageBox3">
+              <img src="{{pic3}}">
+            </div>
+            <div class="content3">
+              <h3>The Third Step</h3>
+              <p>The third step is to paste the image into the box of the website and select either mp3 or mp4</p>
+              <img src="{{pic7}}" class="middle">
+            </div> 
+          </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="step">
+        <h6 class="heading">How to convert youtube videos on a phone/tablet</h6>
+        <div class="container">
+
+          <div class="box4">
+            <div class="imageBox4">
+              <img src="{{pic1}}">
+            </div>
+            <div class="content4">
+              <h3>The First Step</h3>
+              <p>The first step to converting the link on the website is to vist the app or website "youtube.com"</p>
+              <img src="{{pic8}}" class="phoneimg">
+            </div> 
+          </div>
+          <div class="box5">
+            <div class="imageBox5">
+              <img src="{{pic2}}">
+            </div>
+            <div class="content5">
+              <h3>The Second Step</h3>
+              <p>The second step is searching a video and copying the link like this.</p>
+              <img src="{{pic9}}" class="phoneimg">
+            </div> 
+          </div>
+          <div class="box6">
+            <div class="imageBox6">
+              <img src="{{pic3}}">
+            </div>
+            <div class="content6">
+              <h3>The Third Step</h3>
+              <p>The third step is to paste the image into the box of the website and select either mp3 or mp4</p>
+              <img src="{{pic7}}" class="middle">
+            </div> 
+          </div>
+          
+      
+      </div> 
+      </div>
+    </div>
+    <script>
+      function convertMp4(){
+        const vurl=document.getElementById("urlholder").value
+        fetch("/video", {
+          body: JSON.stringify({"url":vurl}),
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json; charset=utf-8'
+          },
+        })
+        .then(response => response.blob())
+        .then(response => {
+            const blob = new Blob([response], {type: 'video\/mp4'});
+            const downloadUrl = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = downloadUrl;
+            a.download = "youtube_download.mp4";
+            document.body.appendChild(a);
+            a.click();
+        })
+      }
+
+      function convertMp3(){
+        const vurl=document.getElementById("urlholder").value
+        fetch("/audio", {
+          body: JSON.stringify({"url":vurl}),
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json; charset=utf-8'
+          },
+        })
+        .then(response => response.blob())
+        .then(response => {
+            const blob = new Blob([response], {type: 'audio/mp3'});
+            const downloadUrl = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = downloadUrl;
+            a.download = "youtube_download.mp3";
+            document.body.appendChild(a);
+            a.click();
+        })
+    }
+  </script>
+  </body>
+</html>
